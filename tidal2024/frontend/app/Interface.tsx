@@ -1,4 +1,4 @@
-import { Text, View, Button, ImageBackground, TouchableHighlight, Image } from "react-native";
+import { Text, View, ImageBackground, Pressable, TouchableHighlight, Image } from "react-native";
 import { useRouter } from 'expo-router';
 import { styles } from './styles';
 import { useFonts, Manjari_400Regular } from '@expo-google-fonts/manjari';
@@ -15,6 +15,9 @@ export default function Interface() {
     return (
         <ImageBackground source={require('../assets/images/TASWATAAOA-background.png')} style={styles.background}>
             <View style={styles.container}>
+                <Pressable style={[styles.button, { position: "absolute", bottom: 30, left: 10 }]} onPress={() => router.push("/")}>
+                    <Text style={styles.text}>Go Home</Text>
+                </Pressable>
                 <Text style={[styles.text, { fontSize: 20 }]}>Tap the shoes to upload your image!</Text>
                 <TouchableHighlight onPress={() => console.log("Pressed.")}>
                     <Image style={{
@@ -23,7 +26,6 @@ export default function Interface() {
                         width: 250
                     }}source={require('../assets/images/sneaker.png')} />
                 </TouchableHighlight>
-                <Button title="To Home" onPress={() => router.push("/")} />
             </View>
         </ImageBackground>
         

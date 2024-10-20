@@ -12,6 +12,15 @@ export const styles = StyleSheet.create({
     },
     text: {
         fontFamily: "Manjari_400Regular",
-        color: "white"
+        color: "white",
+        textAlign: "center"
+    },
+    button: {
+        backgroundColor: "orange",
+        borderRadius: 15,
+        paddingHorizontal: 25,
+        paddingVertical: 10,
+        margin: 10,
+        elevation: 8
     }
 });
